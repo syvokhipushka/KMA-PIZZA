@@ -1,0 +1,75 @@
+
+<%var editable = true%>
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less"/>
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+<% include common/header.ejs %>
+<div class="container">
+    <div class="page-title">
+        <h1>
+            Усі піци
+            <span class="count">8</span>
+        </h1>
+    </div>
+    <div class="pizza-nav">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="#" itemid="0">Усі</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" itemid="1">Мʼясні</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" itemid="2">З ананасами</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" itemid="3">З грибами</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" itemid="4">З морепродуктами</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" itemid="5">Вега</a></li>
+        </ul>
+    </div>
+    <div class="row" id="pizza_list">
+
+    </div>
+    <div class="right-panel">
+        <div class="top">
+            <span>Замовлено</span><span class="amount">3</span>
+            <button type="button" class="btn btn-outline-primary btn-link btn-small">Очистити замовлення</button>
+        </div>
+
+        <div class="buylist" id="cart">
+
+        </div>
+        <div class="bottom">
+            <div>
+                <span>Сума замовлення</span>
+                <span class="total"></span>
+            </div>
+       <button onclick="window.location.href='/order.html' " class="btn btn-lg btn-block btn-order">Замовити</button>
+        </div>
+    </div>
+
+</div>
+<% include common/footer.ejs %>
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+
+
+
+
+</body>

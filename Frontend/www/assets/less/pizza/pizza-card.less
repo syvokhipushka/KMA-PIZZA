@@ -1,0 +1,325 @@
+@right-panel-width: 300px;
+
+.pizza-card {
+  img {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  h3 {
+    color: @mainColor;
+    background-color: lighten(@mainColor, 45%);
+  }
+  .smallimage {
+    max-width: 15px;
+    max-height: 15px;
+  }
+  .p-type {
+    color: darkgray;
+    font-size: 13px;
+  }
+  .small {
+    text-align: center;
+    font-size: 15px;
+  }
+  .big {
+    text-align: center;
+    font-size: 15px;
+  }
+  .p-ingredients {
+    height: 65px;
+    margin-bottom: 5px;
+  }
+
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.badge-danger {
+  background-color: orangered;
+}
+
+.badge-success {
+  background-color: limegreen;
+}
+
+.container {
+  margin-top: 100px;
+  padding-right: @right-panel-width;
+  min-width: @right-panel-width * 2;
+}
+
+.right-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: @right-panel-width;
+  height: 100%;
+  box-shadow: 0 0 3px 2px darkslategrey;
+  .top {
+    padding: 30px 15px 30px 15px;
+    span {
+      font-size: 18px;
+      font-weight: bolder;
+      margin-right: 5px;
+    }
+    button {
+      font-size: 10px;
+    }
+    .amount {
+      background-color: @mainColor;
+      border-radius: 50%;
+      padding: 0 5px 0 5px;
+
+    }
+  }
+
+  .buylist {
+    background-color: lighten(grey, 45%);
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .order {
+      padding: 20px;
+      position: relative;
+      border-bottom: solid darkgray 1px;
+      .pizzaname {
+        font-size: large;
+        color: darken(@mainColor, 5%);
+      }
+      .halfim {
+        position: absolute;
+        top: 20px;
+        right: -37.5px;
+        bottom: 0;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+      }
+      button {
+        border-radius: 50%;
+      }
+      .price {
+        font-size: larger;
+        font-weight: bolder;
+      }
+    }
+  }
+  .bottom {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    width: @right-panel-width;
+    button {
+      margin-top: 20px;
+      background-color: @mainColor;
+    }
+  }
+}
+
+.pizza-card {
+  position: relative;
+
+}
+
+.nav {
+  margin-bottom: 10px;
+  .nav-link {
+    color: @mainColor;
+  }
+  .active {
+    background-color: @mainColor;
+    color: white;
+  }
+}
+
+#topPanel {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  right: @right-panel-width;
+  left: 0;
+  height: 100px;
+}
+
+.cart-top {
+  margin-top: 25px;
+  padding: 5px;
+  margin-left: 150px;
+  margin-right: 50px;
+  border-bottom: solid gray 0.8px;
+  position: relative;
+}
+
+.cart-bottom {
+  margin-left: 150px;
+  margin-right: 50px;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.label1 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.label2 {
+  margin-right: 20px;
+}
+
+.label3 {
+  margin-right: 20px;
+}
+
+.enter-panel {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+
+.enter {
+  background-color: @mainColor;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  border-color: @mainColor;
+}
+
+.page-title {
+  text-align: center;
+  span {
+    background-color: @mainColor;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 0 5px 0 5px;
+  }
+}
+
+.topBadge {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  img {
+    transform: rotateX(180deg);
+    position: fixed;
+    top: 100px;
+    left: 20px;
+  }
+  .badgeText {
+    padding: 18px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #EA862E;
+
+  }
+}
+
+footer {
+  box-shadow: 0 -2px 2px darkgrey;
+  padding-top: 15px;
+  margin: 5px @right-panel-width 0 0;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .label3 {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .label2 {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .cart-bottom {
+    display: none;
+  }
+}
+
+.count {
+  color: white;
+}
+
+.bottom_badge{
+  position: fixed;
+  bottom:0;
+  left:20px;
+
+  .discount{
+    color: white;
+    padding: 5px;
+    width:100px;
+    height: 120px;
+    background-color: #EA862E;
+    margin: 0;
+    text-align: center;
+    font-size: large;
+    p{
+      font-size: x-large;
+      border-top: dashed gray 1px ;
+    }
+  }
+  img{
+    position: fixed;
+    bottom: 120px;
+    left: 20px;
+
+  }
+}
+
+.label-contacts{
+  font-family: "Chiller", serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.order-summary{
+  box-shadow: 1px 1px 1px 1px grey ;
+  border-left: solid @mainColor 3px;
+  margin-top: 60px;
+}
+
+#btn-submit{
+  background-color: @mainColor;
+  border-color: @mainColor;
+  float: right;
+}
+
+.alert{
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  opacity: 20;
+}
+
+#map {
+  width: 1000px;
+  height: 500px;
+  margin-top: 40px;
+}

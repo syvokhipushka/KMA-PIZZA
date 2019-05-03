@@ -1,0 +1,15 @@
+<div class="order">
+    <img class="halfim" src="<%= pizza.icon %>" alt="Pizza">
+    <span class="pizzaname"><%= pizza.title %> (<%= size[1] %>)</span>
+    <div>
+        <span><img class="smallimage" src="assets/images/weight.svg"><%= pizza[size[0]].weight %></span>
+        <span><img class="smallimage" src="assets/images/size-icon.svg"><%= pizza[size[0]].size %></span>
+    </div>
+    <div class="manage-panel">
+        <span class="price"><%= pizza[size[0]].price*quantity %> грн</span>
+        <button class="btn btn-danger btn-circle">-</button>
+        <span><%=quantity%></span>
+        <button class="btn btn-success btn-circle">+</button>
+        <button class="btn btn-default btn-circle">x</button>
+    </div>
+</div>

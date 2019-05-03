@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less"/>
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+<% include common/header.ejs %>
+<div class="container">
+    <div class="label-contacts">Контактні дані</div>
+    <div class="row">
+        <div class="col-md-7">
+            <form>
+                <div class="form-group name">
+                    <label>Ваше Імʼя</label>
+                    <input type="text" class="form-control" id="input_name" aria-describedby="emailHelp"
+                           placeholder="Ім'я Прізвище">
+                    <small style="display: none; color: darkred" id="check_name" class="form-text text-muted">Ваше імʼя,
+                        без
+                        цифр
+                    </small>
+                </div>
+                <div class="form-group phone">
+                    <label>Номер телефону</label>
+                    <input type="text" class="form-control" id="input_phone" placeholder="+38(012)3456789">
+                    <small style="display: none; color: darkred" id="check_phone" class="form-text text-muted">Почніть з
+                        0
+                        або +380
+                    </small>
+                </div>
+                <div class="form-group address">
+                    <label>Адреса доставки</label>
+                    <input type="text" class="form-control" id="input_address"
+                           placeholder="м. *, вул. *, номер *">
+                    <small style="display: none; color: darkred" id="check_address" class="form-text text-muted">Введіть
+                        коректну адресу
+                    </small>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5 order-summary">
+            <div class=" bs-callout bs-callout-warning">
+                <h4>Інформація про замовлення</h4>
+                <p class="order-summery-time">
+                    <b>Приблизний час доставки:</b><span class="delivery_time"> невідомий</span>
+                </p>
+                <p class="order-summery-adress">
+                    <b>Адреса доставки:</b> <span class="delivery_address"> невідома</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <button class="btn" id="btn-submit">Далі</button>
+    <div id="map">
+
+    </div>
+    <div id="liqpay">
+
+    </div>
+    <div class="right-panel">
+        <div class="top">
+            <span>Замовлено</span><span class="amount">3</span>
+        </div>
+
+        <div class="buylist" id="cart">
+
+        </div>
+
+        <div class="bottom">
+            <div>
+                <span>Сума замовлення</span>
+                <span class="total"></span>
+            </div>
+
+            <button onclick="window.location.href='/'" class="btn btn-lg btn-block btn-edit">Редагувати замовлення</button>
+
+        </div>
+    </div>
+    <div class="alert alert-success fade in" style="display: none">
+        <strong>Success!</strong> Your order accepted!
+    </div>
+    <div class="alert alert-danger fade in" style="display: none">
+        <strong>Attention!</strong> Check your input befor submit!
+    </div>
+</div>
+<% include common/footer.ejs %>
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+<script	type="text/javascript"
+           src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBzG54PtviwEyclC4-AHhsM5e2tisig0J4">
+</script>
+<script	src="//static.liqpay.com/libjs/checkout.js">
+
+</script>
+</body>
